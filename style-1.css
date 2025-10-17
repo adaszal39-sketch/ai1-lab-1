@@ -1,0 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a2e1a;
+    background-image: url('https://media.istockphoto.com/id/1066710140/pl/zdj%C4%99cie/p%C3%B3%C5%82nocne-ryby-szczupak-skacz%C4%85c-z-jeziora-lub-rzeki-z-splashes-3d-render.jpg?s=612x612&w=0&k=20&c=ZS7Qr09yjm9de2Tt7A2kIsbwkkTWb-dhy4wAhKWnR9c=');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #f0f0f0;
+    line-height: 1.8;
+}
+
+
+header, footer {
+    background: rgba(18, 38, 18, 0.8); 
+    backdrop-filter: blur(10px); 
+    color: #d4e6d4;
+    text-align: center;
+    padding: 1.5em;
+    border-bottom: 3px solid #556b2f; 
+}
+
+footer {
+    border-bottom: none;
+    border-top: 3px solid #556b2f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a3b8a3;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease; 
+}
+
+nav a:hover {
+    color: #e0f0e0; 
+}
+
+main {
+    max-width: 800px; 
+    margin: 2em auto; 
+    padding: 2em;
+    background: rgba(26, 46, 26, 0.85); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+h1, h2, h3 {
+    color: #adff2f;
+    border: none;
+    padding-left: 0;
+    border-bottom: 2px solid #556b2f;
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+
+ul {
+    background: rgba(0,0,0,0.2);
+    padding: 1.5em 1.5em 1.5em 3em; 
+    border: 1px solid #445925;
+    border-radius: 10px;
+}
+
+li {
+    margin-bottom: 0.8em;
+}
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    main {
+        margin: 1em;
+        padding: 1.5em;
+    }
+
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+}
