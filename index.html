@@ -3,64 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rekordy Polski w spinningu</title>
-
-	<link rel="stylesheet" type="text/css" href="style-1.css" title="style-1">
-    <link rel="alternate stylesheet" type="text/css" href="style-2.css" title="style-2">
-	
-	<script src="https://wi.arturk.pl/zen-style.js.php?styles[]=style-1&styles[]=style-2" defer></script>
+    <title>JS i DOM - Lista ToDo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Rekordy Polski w spinningu</h1>
-        <nav>
-            <ul>
-                <li><a href="#wstep">Wstęp</a></li>
-                <li><a href="#rekordy">Największe rekordy</a></li>
-                <li><a href="#sprzet">Sprzęt i techniki</a></li>
+
+    <div class="todo-container">
+        <header>
+            <h1>Moja Lista Zadań</h1>
+            <div class="controls-container">
+                <div class="search-container">
+                    <input type="search" id="search-input" placeholder="Wyszukaj zadanie (min. 2 znaki)...">
+                </div>
+                <div class="sort-container">
+                    <label for="sort-select">Sortuj (od):</label>
+                    <select id="sort-select">
+                        <option value="date-desc">Najszybszych</option>
+                        <option value="date-asc">Najpozniejszych </option>
+                        <option value="text-asc">Alfabetycznie (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <ul id="todo-list">
             </ul>
-        </nav>
-    </header>
+        </main>
 
-    <main>
-        <h2 id="wstep">Wstęp do świata spinningu</h2>
-        
-        <h3>Historia spinningu w Polsce</h3>
-        <p>Spinning to metoda wędkarska, która zyskała ogromną popularność w Polsce w XX wieku. Pozwala aktywnie szukać ryb, wykorzystując sztuczne przynęty.</p>
-        <p>Jej korzenie sięgają znacznie dalej, ale to rozwój technologii pozwolił na jej masowe upowszechnienie.</p>
+        <footer>
+            <form id="add-form">
+                <input type="text" id="new-task-input" placeholder="Dodaj nowe zadanie..." required minlength="3" maxlength="255">
+                <input type="datetime-local" id="new-task-date">
+                <button type="submit">Dodaj</button>
+            </form>
+            <p id="validation-error" class="error-message"></p>
+        </footer>
+    </div>
 
-        <h3>Dlaczego spinning jest tak popularny?</h3>
-        <p>Wędkarze cenią spinning za dynamikę, możliwość kontaktu z naturą i emocje towarzyszące holowaniu ryby.</p>
-        <p>To aktywna forma wypoczynku, która wymaga ciągłego ruchu i poszukiwania.</p>
-
-        <h2 id="rekordy">Największe rekordy Polski</h2>
-
-        <h3>Szczupak – rekord Polski</h3>
-        <p>Rekordowy szczupak złowiony w Polsce ważył ponad 24 kg. To niezwykły wyczyn, który do dziś budzi podziw wśród wędkarzy.</p>
-        <p>Złowienie takiego okazu wymaga ogromnej wiedzy, cierpliwości i szczęścia.</p>
-        
-        <h3>Sandacz – rekord Polski</h3>
-        <p>Największy polski sandacz złowiony metodą spinningową ważył ponad 15 kg. Był to prawdziwy gigant z Wisły.</p>
-        <p>Sandacze są znane ze swojej ostrożności, co czyni ten rekord jeszcze bardziej imponującym.</p>
-
-        <h2 id="sprzet">Sprzęt i techniki</h2>
-
-        <h3>Najczęściej używane przynęty</h3>
-        <p>W spinningu stosuje się głównie woblery, gumy oraz błystki obrotowe i wahadłowe. Wybór przynęty zależy od gatunku ryby i warunków łowiska.</p>
-        <p>Każdy typ przynęty ma swoją specyficzną pracę w wodzie.</p>
-        
-        <h3>Lista rzeczy niezbędnych w spinningu</h3>
-        <ul>
-            <li>Wędka spinningowa</li>
-            <li>Kołowrotek</li>
-            <li>Plecionka lub żyłka</li>
-            <li>Przynęty sztuczne</li>
-            <li>Podbierak</li>
-        </ul>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Rekordy spinningu – projekt LAB A</p>
-    </footer> -->
+    <script src="script.js" defer></script>
 </body>
 </html>
